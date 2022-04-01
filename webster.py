@@ -1,27 +1,13 @@
-# -*- coding: utf-8 -*-
-"""
-Sample code for using webexteamsbot
-"""
-
 import os
-import requests
 from webexteamsbot import TeamsBot
 from webexteamsbot.models import Response
 import sys
-import json
 
 # Retrieve required details from environment variables
 bot_email = os.getenv("TEAMS_BOT_EMAIL")
 teams_token = os.getenv("TEAMS_BOT_TOKEN")
 bot_url = os.getenv("TEAMS_BOT_URL")
 bot_app_name = os.getenv("TEAMS_BOT_APP_NAME")
-
-# Example: How to limit the approved Webex Teams accounts for interaction
-#          Also uncomment the parameter in the instantiation of the new bot
-# List of email accounts of approved users to talk with the bot
-# approved_users = [
-#     "josmith@demo.local",
-# ]
 
 # If any of the bot environment variables are missing, terminate the app
 if not bot_email or not teams_token or not bot_url or not bot_app_name:
@@ -64,7 +50,7 @@ def greeting(incoming_msg):
 
     # Create a Response object and craft a reply in Markdown.
     response = Response()
-    response.markdown = "Hello {}, I'm a chat bot. ".format(sender.firstName)
+    response.markdown = "Hello {}, I am here to share and analyze your productivity over past weeks.".format(sender.firstName)
     response.markdown += "See what I can do by asking for **/help**."
     return response
 
@@ -77,7 +63,7 @@ def yet_to_implement(incoming_msg):
     :param incoming_msg: The incoming message object from Teams
     :return: A text or markdown based reply
     """
-    return "Pending...."
+    return "Pending...." + incoming_msg;
 
 def jira(incoming_msg):
     """
@@ -93,7 +79,7 @@ bot.set_greeting(greeting)
 
 # Add new commands to the bot.
 
-bot.add_command("jira-training","Jira training sharepoint",yet_to_implement)
+bot.add_command("/rest/applinks/1.0/manifest","*",yet_to_implement)
 bot.add_command("jira-guide","*",yet_to_implement)
 bot.add_command("wap-data-wizards","*",yet_to_implement)
 bot.add_command("cmc","*",yet_to_implement)
