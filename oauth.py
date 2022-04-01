@@ -39,22 +39,7 @@ class SignatureMethod_RSA_SHA1(oauth.SignatureMethod):
 
 
 
-consumer_key = 'OauthKey'
-consumer_secret = '''-----BEGIN RSA PRIVATE KEY-----
-MIICWwIBAAKBgQC2KirHF9qfvdw5jI6RRdGIJTNUjVOql/1FDFiiNLQoEe0QVh7f
-dwzPrzIPH8QzO8fhz/RRalvUR+rAm8JpiC+d0GuT2mO+gSJhCmNrgqOeuaUAVNAp
-/CiPTmuXx06F6OIyawRl1HYEvKiQPOBrsWceFpWygjsz/1/g8fp9NhKlZQIDAQAB
-AoGAB2suNM9+4tSLnHhh8f6i6uWA8qeSybbI5L/8+BYnZB5exjSLq1Qg3HBpHH6R
-sfh0Snj6nTo0pS+Mmu18/GlEbxo7uVeATwbQ1t9GNCyGQ6q1Obp3Umsn6bOR03ML
-pTT0IM0SGioIh+8Mw5SRukurbcCi0O509ZGGL4sohD3UzV0CQQDtaixcNMWOUIT2
-JXVIqG+AYvS7F1R7jcxPMT4NG/Fd6bG27AUlM5phtxPPep8W1TBUdiDtO5eUO0oj
-7t/W8DufAkEAxGzGbZ+fivScec9T3dwW3RfM5qRRqve30w5SvN/HzO3InxlQdjf2
-uH2PGVh62F3OSqc8SVTINK+pMBDaDZoAewJAOFPxdGr82DgYY8IdYoC7+6z+vYja
-fXn2GG/pdfjEOnDgvjKfQeVNYpOqOpawOh2YmuFwDHkQDJZIj9/z8a4LpwJAfFrt
-SSvcoul4Qzn6O6SCKRlPVNnFBntsOsd/pCn84YXNFMS/BwkpPuXm+cHljCPfXa4A
-4eA2G/z2HQMeOaw9DwJAP4UPBKxfwNbDVCpOwt98vGlRZR8ob6mWF3C3ZkkU1oNI
-zqFt57NnEv1GoxP16Q9ajHLCvegrzkbK6v1hgKqWKQ==
------END RSA PRIVATE KEY-----'''
+
 
 request_token_url = 'https://vaidesai.atlassian.net/jira/plugins/servlet/oauth/request-token'
 access_token_url = 'https://vaidesai.atlassian.net/jira/plugins/servlet/oauth/access-token'
